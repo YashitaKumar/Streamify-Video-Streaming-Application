@@ -65,7 +65,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="Login to Streamify"
+        android:text="Login to STREAMIFY"
         android:textColor="@color/white"
         android:textSize="25dp"
         android:textStyle="bold"

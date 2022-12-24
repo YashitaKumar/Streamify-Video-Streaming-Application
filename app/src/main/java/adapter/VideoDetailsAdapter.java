@@ -25,6 +25,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -53,7 +54,6 @@ public class VideoDetailsAdapter extends RecyclerView.Adapter<VideoDetailsAdapte
 
         holder.title.setText(list.get(position).getSnippet().getTitle());
         holder.desc.setText(list.get(position).getSnippet().getDescription());
-        String date = list.get(position).getSnippet().getPublishedAt();
         holder.date.setText(list.get(position).getSnippet().getPublishedAt());
         Glide.with(holder.poster.getContext()).load(list.get(position).getSnippet().getThumbnails().getMedium().getUrl()).into(holder.poster);
         holder.poster.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +61,7 @@ public class VideoDetailsAdapter extends RecyclerView.Adapter<VideoDetailsAdapte
             public void onClick(View view) {
                 Intent intent = new Intent(context, VideoActivity.class);
                 intent.putExtra("Vid",list.get(position).getId().getVideoId());
+                intent.putExtra("Vtitle",list.get(position).getSnippet().getTitle());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }

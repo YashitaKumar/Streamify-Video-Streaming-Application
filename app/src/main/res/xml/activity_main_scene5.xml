@@ -55,7 +55,8 @@
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:scaleX="0"
-            android:scaleY="0" />
+            android:scaleY="0"
+            motion:layout_constraintVertical_bias="0.52" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -103,6 +104,7 @@
             motion:layout_constraintStart_toStartOf="parent"
             android:scaleX="1"
             android:scaleY="1"
-            motion:transitionEasing="cubic(1,0,1,0)" />
+            motion:transitionEasing="cubic(1,0,1,0)"
+            motion:layout_constraintVertical_bias="0.52" />
     </ConstraintSet>
 </MotionScene>
