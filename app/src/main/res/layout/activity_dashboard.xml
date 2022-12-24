@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity"
+    android:background="@color/black">
+
+    <!--  Header Design  -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/MoviesBtn"
+            android:layout_marginLeft="20dp"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo1"
+            android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="STREAMIFY"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/profile"
+                android:layout_gravity="center"
+                android:layout_marginLeft="45dp"
+                android:src="@drawable/user"/>
+        <ImageView
+            android:id="@+id/signout"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logout2"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:text="Available Channels"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+    <!--  Use card view to improve -->
+    <ScrollView
+        android:id="@+id/forRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="5dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Channels"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header" />
+</ScrollView>
+
+
+
+
+
+</RelativeLayout>
