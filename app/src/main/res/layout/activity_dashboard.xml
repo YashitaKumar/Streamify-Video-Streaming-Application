@@ -44,7 +44,7 @@
             android:id="@+id/signout"
             android:layout_width="50dp"
             android:layout_height="30dp"
-            android:src="@drawable/logout2"
+            android:src="@drawable/logout3"
             android:layout_gravity="center"/>
 
     </LinearLayout>
