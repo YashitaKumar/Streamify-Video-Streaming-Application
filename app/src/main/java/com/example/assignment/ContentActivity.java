@@ -62,7 +62,7 @@ public class ContentActivity extends AppCompatActivity{
         header.setText(name);
 
         GetDataService dataService = RetrofitInstance.getRetrofit().create(GetDataService.class);
-        Call<VideoDetails> videoDetailsCall = dataService.getVideoData("snippet",id,"20","viewCount","AIzaSyAcgrTuXkz8vqQ3wEqFu8NtWcjL7YQiZms");
+        Call<VideoDetails> videoDetailsCall = dataService.getVideoData("snippet",id,"20","viewCount","AIzaSyBa6Rbke2I7TSie9u-hVGlka_gHoeMbD28");
         videoDetailsCall.enqueue(new Callback<VideoDetails>() {
             @Override
             public void onResponse(Call<VideoDetails> call, Response<VideoDetails> response) {

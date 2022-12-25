@@ -55,7 +55,7 @@ public class VideoActivity extends YouTubeBaseActivity implements YouTubePlayer.
             }
         });
 
-        youTubePlayerView.initialize("AIzaSyAcgrTuXkz8vqQ3wEqFu8NtWcjL7YQiZms",this);
+        youTubePlayerView.initialize("AIzaSyBa6Rbke2I7TSie9u-hVGlka_gHoeMbD28",this);
 
         getStats();
     }
